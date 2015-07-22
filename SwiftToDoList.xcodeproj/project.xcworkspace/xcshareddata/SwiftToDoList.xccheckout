@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>682FCF4B-148B-44B9-99A6-41B27E9E94A7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>71FD09A069C189AB3E03A21706031085177B0F53</key>
+		<string>https://github.com/jlareo/SwiftToDoList.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SwiftToDoList.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>71FD09A069C189AB3E03A21706031085177B0F53</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jlareo/SwiftToDoList.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>71FD09A069C189AB3E03A21706031085177B0F53</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>71FD09A069C189AB3E03A21706031085177B0F53</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SwiftToDoList</string>
+		</dict>
+	</array>
+</dict>
+</plist>
