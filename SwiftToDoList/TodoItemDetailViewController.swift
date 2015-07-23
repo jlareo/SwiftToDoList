@@ -11,7 +11,8 @@ import UIKit
 class TodoItemDetailViewController: UIViewController {
     
     var detailTodoItemModel: TodoItemModel!
-
+    var mainVC: ViewController!
+    
     @IBOutlet weak var taskTextField: UITextField!
     @IBOutlet weak var subTaskTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -34,7 +35,9 @@ class TodoItemDetailViewController: UIViewController {
     }
     
     @IBAction func doneBarButtomPressed(sender: UIBarButtonItem) {
-        
+        var todoItem = TodoItemModel(task: taskTextField.text, subtask: subTaskTextField.text, date: datePicker.date)
+        mainVC.todoArray[mainVC.tableView.indexPathForSelectedRow()!.row] = todoItem
+        self.navigationController?.popViewControllerAnimated(true)
     }
     
     @IBAction func cancelBarButtomPressed(sender: UIBarButtonItem) {

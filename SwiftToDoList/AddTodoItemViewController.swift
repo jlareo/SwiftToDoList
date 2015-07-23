@@ -36,6 +36,5 @@ class AddTodoItemViewController: UIViewController {
         var todoItem = TodoItemModel(task: taskTextField.text, subtask: subtaskTextField.text, date: datePickerField.date)
         mainVC.todoArray.append(todoItem)
         self.dismissViewControllerAnimated(true, completion: nil)
-        mainVC.tableView.reloadData()
     }
 }

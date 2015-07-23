@@ -19,6 +19,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -30,6 +35,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let indexPath = self.tableView.indexPathForSelectedRow()
             let thisTodoItem = todoArray[indexPath!.row]
             detailVC.detailTodoItemModel = thisTodoItem
+            
+            //To allow to modify the current todo item, we past the current view controller
+            detailVC.mainVC = self
         }
         else if segue.identifier == "showTodoItemAdd"{
             let addTodoItemVC: AddTodoItemViewController = segue.destinationViewController as! AddTodoItemViewController
