@@ -11,18 +11,12 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+
     var todoArray: [TodoItemModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        
-        let todoItem1 = TodoItemModel(task: "aa", subtask: "bb", date: Date.from(year: 1999, month: 2, day: 3))
-        let todoItem2 = TodoItemModel(task: "cc", subtask: "ee", date: Date.from(year: 3333, month: 3, day: 1))
-
-        todoArray = [todoItem1, todoItem2]
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +31,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let thisTodoItem = todoArray[indexPath!.row]
             detailVC.detailTodoItemModel = thisTodoItem
         }
+        else if segue.identifier == "showTodoItemAdd"{
+            let addTodoItemVC: AddTodoItemViewController = segue.destinationViewController as! AddTodoItemViewController
+            addTodoItemVC.mainVC = self
+        }
     }
+    
+    
+    @IBAction func addBarButtomPressed(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("showTodoItemAdd", sender: self)
+        println(todoArray.count)
+    }
+    
     
     //UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,7 +56,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.taskLabel.text = todoArray[indexPath.row].task
         cell.descriptionLabel.text = todoArray[indexPath.row].subtask
         cell.dateLabel.text = Date.toString(date: todoArray[indexPath.row].date)
-        
         return cell
     }
     

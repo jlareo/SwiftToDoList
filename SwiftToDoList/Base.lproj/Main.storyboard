@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--TO-DO-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftToDoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,17 +61,101 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="J8D-8H-cPL"/>
+                    <navigationItem key="navigationItem" title="TO-DO" id="J8D-8H-cPL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5v6-v5-eBD">
+                            <connections>
+                                <action selector="addBarButtomPressed:" destination="BYZ-38-t0r" id="86C-MY-6CS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="TzQ-jK-ZWb" id="NTU-zP-teH"/>
                         <segue destination="wT8-tl-IKy" kind="show" identifier="showTodoItemDetail" id="JdG-C5-L6d"/>
+                        <segue destination="EHB-6m-4jB" kind="presentation" identifier="showTodoItemAdd" id="ciG-tX-7Xs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1035" y="-270"/>
         </scene>
-        <!--Todo Item Detail View Controller-->
+        <!--Add Todo Item View Controller-->
+        <scene sceneID="YVj-MT-VNZ">
+            <objects>
+                <viewController id="EHB-6m-4jB" customClass="AddTodoItemViewController" customModule="SwiftToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AsM-Sj-hop"/>
+                        <viewControllerLayoutGuide type="bottom" id="y8n-WT-Jef"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bWH-as-3B6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcH-EO-im6">
+                                <rect key="frame" x="16" y="87" width="254" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Bm-2K-Mn2">
+                                <rect key="frame" x="16" y="155" width="254" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="9S3-2m-CuO">
+                                <rect key="frame" x="-15" y="227" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="459329113.026501">
+                                    <!--2015-07-23 07:25:13 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n51-9J-as7">
+                                <rect key="frame" x="16" y="20" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBarButtomPressed:" destination="EHB-6m-4jB" eventType="touchUpInside" id="hnk-G7-urL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmO-gR-rm8">
+                                <rect key="frame" x="16" y="58" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtask" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZb-r9-wp0">
+                                <rect key="frame" x="16" y="126" width="63" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdr-oS-DtM">
+                                <rect key="frame" x="16" y="198" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gqe-ea-yvq">
+                                <rect key="frame" x="189" y="20" width="116" height="30"/>
+                                <state key="normal" title="Add TO-DO Item">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTodoItemBarButtomPressed:" destination="EHB-6m-4jB" eventType="touchUpInside" id="8Sp-Of-Mu9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePickerField" destination="9S3-2m-CuO" id="XFt-AS-3J5"/>
+                        <outlet property="subtaskTextField" destination="1Bm-2K-Mn2" id="Eh8-ga-L2z"/>
+                        <outlet property="taskTextField" destination="fcH-EO-im6" id="iGx-MW-e4W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t55-k0-STA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866" y="82"/>
+        </scene>
+        <!--Detail-->
         <scene sceneID="Mge-Cr-iUf">
             <objects>
                 <viewController id="wT8-tl-IKy" customClass="TodoItemDetailViewController" customModule="SwiftToDoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,6 +186,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Detail" id="ebw-6j-q8s">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="IkH-iu-u6C">
+                            <connections>
+                                <action selector="cancelBarButtomPressed:" destination="wT8-tl-IKy" id="Oar-Q6-LRj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="G1H-ie-ClT">
+                            <connections>
+                                <action selector="doneBarButtomPressed:" destination="wT8-tl-IKy" id="jPf-9X-gV8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="TVi-Uk-6R9" id="Jj2-k1-T5Q"/>
                         <outlet property="subTaskTextField" destination="eaB-xH-QnV" id="Vv0-NX-biZ"/>
@@ -110,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvi-fJ-ytn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824" y="-270"/>
+            <point key="canvasLocation" x="1866" y="-672"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bhc-fu-1sk">

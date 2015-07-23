@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC3307D11B60CB8A00D7CAE4 /* AddTodoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3307D01B60CB8A00D7CAE4 /* AddTodoItemViewController.swift */; };
 		BCAB52A21B5FB26600C2F292 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAB52A11B5FB26600C2F292 /* AppDelegate.swift */; };
 		BCAB52A41B5FB26600C2F292 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAB52A31B5FB26600C2F292 /* ViewController.swift */; };
 		BCAB52A71B5FB26600C2F292 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCAB52A51B5FB26600C2F292 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC3307D01B60CB8A00D7CAE4 /* AddTodoItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTodoItemViewController.swift; sourceTree = "<group>"; };
 		BCAB529C1B5FB26600C2F292 /* SwiftToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCAB52A01B5FB26600C2F292 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCAB52A11B5FB26600C2F292 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				BCAB52C51B5FDB0B00C2F292 /* TodoItemModel.swift */,
 				BCAB52C31B5FCF0100C2F292 /* TodoItemCell.swift */,
 				BCAB52C91B5FDDC700C2F292 /* TodoItemDetailViewController.swift */,
+				BC3307D01B60CB8A00D7CAE4 /* AddTodoItemViewController.swift */,
 				BCAB52A51B5FB26600C2F292 /* Main.storyboard */,
 				BCAB52A81B5FB26600C2F292 /* Images.xcassets */,
 				BCAB52AA1B5FB26600C2F292 /* LaunchScreen.xib */,
@@ -225,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCAB52C61B5FDB0B00C2F292 /* TodoItemModel.swift in Sources */,
+				BC3307D11B60CB8A00D7CAE4 /* AddTodoItemViewController.swift in Sources */,
 				BCAB52CC1B5FEE8B00C2F292 /* Date.swift in Sources */,
 				BCAB52A41B5FB26600C2F292 /* ViewController.swift in Sources */,
 				BCAB52CA1B5FDDC700C2F292 /* TodoItemDetailViewController.swift in Sources */,
@@ -427,6 +431,7 @@
 				BCAB52BD1B5FB26700C2F292 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCAB52BE1B5FB26700C2F292 /* Build configuration list for PBXNativeTarget "SwiftToDoListTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +440,7 @@
 				BCAB52C01B5FB26700C2F292 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

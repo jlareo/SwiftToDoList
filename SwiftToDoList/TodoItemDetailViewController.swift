@@ -33,4 +33,11 @@ class TodoItemDetailViewController: UIViewController {
         
     }
     
+    @IBAction func doneBarButtomPressed(sender: UIBarButtonItem) {
+        
+    }
+    
+    @IBAction func cancelBarButtomPressed(sender: UIBarButtonItem) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }
